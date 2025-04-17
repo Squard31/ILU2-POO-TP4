@@ -12,13 +12,12 @@ public class Scenario {
 
 	public static void main(String[] args) {
 
-		// TODO Partie 4 : creer de la classe anonyme Village
 		IVillage village = new IVillage() {
 			private IEtal[] etals = new Etal[100];
 			int nbEtalOccupe = 0;
 
 			@Override
-			public <P extends Produit> boolean installerVendeur(IEtal<P> etal, Gaulois vendeur, P[] produit, int prix) {
+			public <P extends Produit> boolean installerVendeur(Etal<P> etal, Gaulois vendeur, P[] produit, int prix) {
 				if (nbEtalOccupe < 100) {
 					etals[nbEtalOccupe] = etal;
 					etal.installerVendeur(vendeur, produit, prix);

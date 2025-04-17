@@ -3,11 +3,12 @@ package villagegaulois;
 import personnages.Gaulois;
 import produit.Produit;
 
-public class Etal<P extends Produit> implements IEtal<P> {
+public class Etal<P extends Produit> implements IEtal {
 	private Gaulois vendeur;
 	private P[] produits;
 	private int nbProduit;
 	private int prix;
+	private boolean etalOccupe = false;
 
 	@Override
 	public Gaulois getVendeur() {
@@ -19,6 +20,11 @@ public class Etal<P extends Produit> implements IEtal<P> {
 		this.prix = prix;
 		this.nbProduit = produit.length;
 		this.produits = produit;
+		etalOccupe = true;
+	}
+
+	public boolean isEtalOccupe() {
+		return etalOccupe;
 	}
 
 	@Override

@@ -1,7 +1,5 @@
 package produit;
 
-import personnages.Gaulois;
-
 public class Poisson extends Produit {
 	private String datePeche;
 
