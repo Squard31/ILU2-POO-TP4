@@ -30,13 +30,13 @@ public class Scenario {
 			@Override
 			public void acheterProduit(String produit, int quantiteSouhaitee) {
 				int quantiteDispo;
-				int prixPaye = 0;
+				int cout = 0;
 				for (int i = 0; i < nbEtalOccupe; i++) {
 					if ((quantiteDispo = (etals[i].contientProduit(produit, quantiteSouhaitee))) != 0) {
-						prixPaye = etals[i].acheterProduit(quantiteDispo);
+						cout = etals[i].acheterProduit(quantiteDispo);
 						quantiteSouhaitee -= quantiteDispo;
 						System.out.println("A l'étal n°" + (i + 1) + ",j'achète " + quantiteDispo + " " + produit
-								+ " et je paye " + prixPaye + " sous.");
+								+ " et je paye " + cout + " sous.");
 					}
 				}
 			}

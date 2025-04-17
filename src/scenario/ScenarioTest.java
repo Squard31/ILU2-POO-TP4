@@ -27,11 +27,11 @@ public class ScenarioTest {
 //	}
 
 	private static String accorderNomProduit(String produit, int quantiteSouhaitee) {
-		String chaineProduit = produit;
+		String phraseProduit = produit;
 		if (quantiteSouhaitee > 1) {
-			chaineProduit = produit + "s";
+			phraseProduit = produit + "s";
 		}
-		return chaineProduit;
+		return phraseProduit;
 	}
 
 	public static void main(String[] args) {
